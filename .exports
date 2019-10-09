@@ -1,0 +1,19 @@
+
+export PATH_TO_PLAYGROUND="$HOME/playground"
+export PATH_TO_PROJECTS="$HOME/Projects"
+export TEXT_EDITOR="Visual Studio Code"
+
+export CLICOLOR=yes     # Enable color ls output
+export TERM=xterm-color # Flag terminal as color-capable
+export GREP_OPTIONS='--color=auto'
+export LESS="-eirMX"
+
+#### Add some paths to $PATH. ####
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BASHRC_INCLUDES=$DIR/bashrc_includes
+export PATH=$PATH:$DIR/scripts
+
+# A function to change title (works in iTerm).
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
